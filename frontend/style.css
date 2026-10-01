@@ -1,7 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 40px;
+  padding: 24px;
+  background: #ffffff;
+  color: #ffffff;
   font-family: Arial, sans-serif;
-  background: #f4f7f7;
-  color: #172c30;
+}
+
+.brand {
+  width: 100%;
+  max-width: 704px;
+  min-height: 630px;
+  margin: 0 auto;
+  background: #121b1d;
+  border-radius: 28px;
+}
+
+/* Шапка */
+
+.hujnjaSverhu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 12px 20px;
+  background: #1c282b;
+  border-radius: 28px 28px 0 0;
+}
+
+.hujnjaSverhu > div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.BukvaBolshaja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: #6ad4c0;
+  color: #121b1d;
+  font-size: 38px;
+}
+
+.hujnjaSverhu span {
+  font-size: 20px;
+}
+
+.hujnjaSverhu nav {
+  display: flex;
+  gap: 8px;
+}
+
+.knopki {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #6ad4c0;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.knopki:first-child {
+  background: #223f3c;
+}
+
+.knopki:hover {
+  background: #294946;
+}
+
+/* Заголовок и описание */
+
+main {
+  padding: 30px 48px;
+}
+
+main > p:first-child {
+  margin: 0 0 8px;
+  color: #6ad4c0;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+h1 + p {
+  margin: 12px 0 0;
+  color: #a8bcbf;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Форма */
+
+.forma {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #1c282b;
+}
+
+.stroka {
+  display: grid;
+  grid-template-columns: 1.75fr 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.pole {
+  min-width: 0;
+}
+
+.forma label {
+  display: block;
+  margin-bottom: 6px;
+  color: #dce6e8;
+  font-size: 12px;
+}
+
+/* Имя, класс, предмет и комментарий */
+
+.forma input[type="text"],
+.forma select,
+.forma textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #2c3d42;
+  border-radius: 8px;
+  background: #243338;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.forma input[type="text"],
+.forma select {
+  min-height: 40px;
+}
+
+.forma select {
+  margin-bottom: 16px;
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.forma textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.forma input[type="text"]::placeholder,
+.forma textarea::placeholder {
+  color: #8da5aa;
+  opacity: 1;
+}
+
+.forma input[type="text"]:focus,
+.forma select:focus,
+.forma textarea:focus {
+  border-color: #6ad4c0;
+  outline: 2px solid #6ad4c0;
+  outline-offset: 2px;
+}
+
+/* Оценки от 1 до 5 */
+
+.ocenki {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.ocenki input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.ocenki label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  margin: 0;
+  border: 1px solid #2c3d42;
+  border-radius: 8px;
+  background: #243338;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ocenki label:hover {
+  border-color: #6ad4c0;
+}
+
+.ocenki input:checked + label {
+  border-color: #6ad4c0;
+  background: #6ad4c0;
+  color: #121b1d;
+}
+
+.ocenki input:focus-visible + label {
+  outline: 2px solid #6ad4c0;
+  outline-offset: 3px;
+}
+
+/* Комментарий и отправка */
+
+.kommentar {
+  margin-top: 16px;
+}
+
+.otpravit {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #6ad4c0;
+  color: #121b1d;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.otpravit:hover {
+  background: #85dfce;
+}
+
+.knopki:focus-visible,
+.otpravit:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Узкий экран */
+
+@media (max-width: 520px) {
+  body {
+    padding: 12px;
+  }
+
+  .hujnjaSverhu {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .hujnjaSverhu > div {
+    gap: 14px;
+  }
+
+  main {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .forma {
+    padding: 16px;
+  }
+
+  .stroka {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ocenki {
+    gap: 8px;
+  }
+}
+
+.podpisi {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  color: #8da5aa;
+  font-size: 11px;
+}
+
+.hujnjaVnizu {
+  text-align: center;
+  margin-top: 10px;
+  color: #8da5aa;
+  font-size: 11px;
 }

@@ -3,12 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Tagasiside</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
-  <h1>Õppeainete tagasiside</h1>
-  <p>Anna tagasisidet läbitud õppeaine kohta.</p>
+  <div class="brand">
+
+    <header class="hujnjaSverhu">
+      <div>
+        <div class="BukvaBolshaja">T</div>
+        <span>Tagasiside</span>
+      </div>
+
+      <nav>
+        <button type="button" class="knopki">
+          Õpilasele
+        </button>
+
+        <button type="button" class="knopki">
+          Õpetajale
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <p>ÕPPEAINETE TAGASISIDE</p>
+
+      <h1>Sinu arvamus loeb.</h1>
+
+      <p>
+        Jaga oma kogemust ja aita õppetööd paremaks muuta.
+      </p>
+
+      <form class="forma">
+
+  <div class="stroka">
+
+    <div class="pole">
+      <label for="imja">Nimi *</label>
+      <input
+        type="text"
+        id="imja"
+        name="student_name"
+        placeholder="Ees- ja perekonnanimi"
+        autocomplete="name"
+        required
+      >
+    </div>
+
+    <div class="pole">
+      <label for="klass">Klass *</label>
+      <input
+        type="text"
+        id="klass"
+        name="class_name"
+        placeholder="Nt 11.A"
+        required
+      >
+    </div>
+
+  </div>
+
+  <div class="pole predmet">
+  <label for="predmet">Õppeaine *</label>
+
+  <select id="predmet" name="subject" required>
+    <option value="">Vali õppeaine</option>
+    <option value="matemaatika">Matemaatika</option>
+    <option value="eesti-keel">Eesti keel</option>
+    <option value="inglise-keel">Inglise keel</option>
+    <option value="fuusika">Füüsika</option>
+    <option value="ajalugu">Ajalugu</option>
+  </select>
+
+</div>
+
+<p>Kuidas hindad õppeainet? *</p>
+
+<div class="ocenki">
+  <input type="radio" id="hinne1" name="rating" value="1">
+  <label for="hinne1">1</label>
+
+  <input type="radio" id="hinne2" name="rating" value="2">
+  <label for="hinne2">2</label>
+
+  <input type="radio" id="hinne3" name="rating" value="3">
+  <label for="hinne3">3</label>
+
+  <input type="radio" id="hinne4" name="rating" value="4">
+  <label for="hinne4">4</label>
+
+  <input type="radio" id="hinne5" name="rating" value="5">
+  <label for="hinne5">5</label>
+</div>
+
+<div class="podpisi">
+  <span>1 · Väga halb</span>
+  <span>5 · Väga hea</span>
+</div>
+
+<div class="pole kommentar">
+  <label for="kommentar">Kommentaar · vabatahtlik</label>
+
+  <textarea
+    id="kommentar"
+    name="comment"
+    rows="4"
+    placeholder="Mis läks hästi? Mida võiks parandada?"
+  ></textarea>
+</div>
+
+<button type="submit" class="otpravit">
+  Saada tagasiside
+</button>
+
+</form>
+<p class="hujnjaVnizu">* Kohustuslik väli</p>
+    </main>
+
+  </div>
 </body>
 </html>
