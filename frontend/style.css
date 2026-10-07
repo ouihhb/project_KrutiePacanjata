@@ -312,3 +312,10 @@ h1 + p {
   color: #8da5aa;
   font-size: 11px;
 }
+
+.oshibka {
+  display: block;
+  margin-top: 6px;
+  color: #ff4d4f;
+  font-size: 12px;
+}

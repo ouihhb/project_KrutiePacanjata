@@ -39,7 +39,7 @@
         Jaga oma kogemust ja aita õppetööd paremaks muuta.
       </p>
 
-      <form class="forma">
+      <form class="forma" novalidate>
 
   <div class="stroka">
 
@@ -55,6 +55,8 @@
       >
     </div>
 
+    <small id="imja-oshibka" class="oshibka" aria-live="polite"></small>
+
     <div class="pole">
       <label for="klass">Klass *</label>
       <input
@@ -65,6 +67,8 @@
         required
       >
     </div>
+
+    <small id="klass-oshibka" class="oshibka" aria-live="polite"></small>
 
   </div>
 
@@ -80,7 +84,10 @@
     <option value="ajalugu">Ajalugu</option>
   </select>
 
+   <small id="predmet-oshibka" class="oshibka" aria-live="polite"></small>
 </div>
+
+
 
 <p>Kuidas hindad õppeainet? *</p>
 
@@ -99,6 +106,8 @@
 
   <input type="radio" id="hinne5" name="rating" value="5">
   <label for="hinne5">5</label>
+
+  <small id="ocenki-oshibka" class="oshibka" aria-live="polite"></small>
 </div>
 
 <div class="podpisi">
